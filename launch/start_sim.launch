@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+     <arg name="port" value="8080"/>
+     <arg name="address" value="0.0.0.0"/>
+  </include>
+  <include file="$(find multirobot_nav)/launch/multi_turtlebot3.launch" />
+  <include file="$(find multirobot_nav)/launch/multi_nav.launch" />
+</launch>
